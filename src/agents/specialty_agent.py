@@ -9,7 +9,7 @@ async def get_specializations():
     async with httpx.AsyncClient() as client:
 
         response = await client.get(
-            "{api_url}/api/speclization_list/"
+            f"{api_url}/api/speclization_list/"
         )
 
     return response.json()
