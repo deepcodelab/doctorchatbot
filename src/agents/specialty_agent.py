@@ -2,14 +2,15 @@ import json
 import httpx
 
 from services.gemini_client import groq_client
-api_url = "https://doctotrrefweb.onrender.com"
+# api_url = "http://127.0.0.1:8000/api/"
+api_url = "https://doctotrrefweb.onrender.com/api/"
 
 async def get_specializations():
 
     async with httpx.AsyncClient() as client:
 
         response = await client.get(
-            f"{api_url}/api/speclization_list/"
+            f"{api_url}speclization_list/"
         )
 
     return response.json()
