@@ -12,7 +12,7 @@ except Exception as e:
 
 
 try:
-    groq_client = Groq(api_key="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")
+    groq_client = Groq(api_key="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")
 except Exception as e:
     print(f"Failed to initialize the Gorq client: {e}")
     raise

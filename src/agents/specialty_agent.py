@@ -1,7 +1,9 @@
 import json
 import httpx
-
+from services.prompts import SPECIALTY_AGENT_PROMPT
 from services.gemini_client import groq_client
+
+
 # api_url = "http://127.0.0.1:8000/api/"
 api_url = "https://doctotrrefweb.onrender.com/api/"
 
@@ -16,30 +18,9 @@ async def get_specializations():
     return response.json()
 
 
-SPECIALTY_AGENT_PROMPT = """
-        You are SpecialtyAgent.
-
-        Your task:
-        - determine the most relevant medical specialty
-        - based on structured medical context
-
-        Rules:
-        - only choose from available specializations
-        - never invent a specialization
-        - do not diagnose diseases
-        - return valid JSON only
-
-        Example:
-
-        {
-        "specialty": "General Physician",
-        "reason": "Fever with mild symptoms is best evaluated by a general physician."
-        }
-        """
 
 
 class SpecialtyAgent:
-
     async def run(self,state,task=None):
         specializations = await get_specializations()
 
