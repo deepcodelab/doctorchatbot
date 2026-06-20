@@ -2,8 +2,8 @@ import json
 import httpx
 from services.gemini_client import groq_client
 
-# api_url = "http://127.0.0.1:8000/api/"
-api_url = "https://doctotrrefweb.onrender.com/api/"
+api_url = "http://127.0.0.1:8000/api/"
+# api_url = "https://doctotrrefweb.onrender.com/api/"
 
 async def book_doctor(token, data):
     print("4444")

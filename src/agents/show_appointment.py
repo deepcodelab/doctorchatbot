@@ -2,8 +2,8 @@ import json
 import httpx
 
 
-# api_url = "http://127.0.0.1:8000/api"
-api_url = "https://doctotrrefweb.onrender.com/api"
+api_url = "http://127.0.0.1:8000/api"
+# api_url = "https://doctotrrefweb.onrender.com/api"
 
 async def my_appointment(token):
     url = f"{api_url}/appointments/"

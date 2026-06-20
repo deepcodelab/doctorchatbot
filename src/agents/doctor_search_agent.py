@@ -3,8 +3,8 @@ import httpx
 from services.gemini_client import groq_client
 from services.prompts import DOCTOR_SEARCH_PROMPT
 
-# api_url = "http://127.0.0.1:8000/api"
-api_url = "https://doctotrrefweb.onrender.com/api"
+api_url = "http://127.0.0.1:8000/api"
+# api_url = "https://doctotrrefweb.onrender.com/api"
 
 async def search_doctor(spicility, city, token):
     url = f"{api_url}/chat_doctors/bot_search/"
